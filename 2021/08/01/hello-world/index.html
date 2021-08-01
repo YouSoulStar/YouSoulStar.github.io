@@ -63,6 +63,20 @@
 
     
 
+<script>
+(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 <!--[if lte IE 8]>
 <style>
@@ -83,7 +97,9 @@
         <div class="branding">
             <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-            <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            <h2>
+                愿你走出半生，归来仍是少年
+            </h2>
             
         </div>
     </div>
@@ -104,27 +120,27 @@
                         
                         <li role="presentation" class="text-center">
                             <a href="/"><i class="fa "></i>
-                                Home</a>
+                                主页</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/前端/"><i class="fa "></i>
-                                前端</a>
+                            <a href="/categories/总结归纳/"><i class="fa "></i>
+                                总结归纳</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/后端/"><i class="fa "></i>
-                                后端</a>
+                            <a href="/categories/成长记录/"><i class="fa "></i>
+                                成长记录</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
                             <a href="/categories/工具/"><i class="fa "></i>
-                                工具</a>
+                                插件</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
                             <a href="/archives/"><i class="fa "></i>
-                                时间轴</a>
+                                归档</a>
                         </li>
                         
                     </ul>
@@ -166,6 +182,11 @@
         <i class="fa fa-clock-o"></i>
         <span class="date-meta">
             2021/08/01</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
     </span>
     
     
@@ -268,11 +289,21 @@ new Valine({
             <div class="col-sm-12">
                 <div class="busuanzi">
     
+    Total:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    Visitors:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
 </div>
             </div>
             <div class="col-sm-12">
                 <span>Copyright &copy;
-                    2017
+                    2021
                     
                 </span> |
                 <span>
@@ -287,6 +318,32 @@ new Valine({
 </div>
 
 
+
+<script src="/assets/tagcanvas.min.js?rev=2.9.js"></script>
+
+<script>
+var tagOption = {
+    textColour: '#444', // 字体颜色
+    outlineMethod: 'block', // 选中模式
+    outlineColour: '#FFDAB9', // 选中模式的颜色
+    interval: 30 || 30, // 动画帧之间的时间间隔，值越大，转动幅度越大
+    textHeight: 13,
+    outlineRadius: 3,
+    freezeActive: true || '', // 选中的标签是否继续滚动
+    frontSelect: true || '', // 不选标签云后部的标签
+    initial: [0.1, -0.1],
+    depth: 0.5,
+    decel: 0.95,
+    maxSpeed: 0.03,
+    reverse: true || '', // 是否反向触发
+    fadeIn: 500, // 进入动画时间
+    wheelZoom: false || '' // 是否启用鼠标滚轮
+}
+TagCanvas.Start('tag-cloud-3d', '', tagOption);
+</script>
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 <script src="/js/app.js?rev=@@hash.js"></script>
